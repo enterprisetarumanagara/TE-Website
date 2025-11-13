@@ -3,6 +3,7 @@ import { Roboto_Slab, Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LanguageProvider>
           <Header />
             {children}
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
