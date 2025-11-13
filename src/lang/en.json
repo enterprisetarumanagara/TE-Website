@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "events": "Events",
+    "contact": "Contact",
+    "tpc": "TPC"
+  },
+  "language": {
+    "ina": "INA",
+    "eng": "ENG"
+  },
+  "header": {
+    "tagline": "Empowering young entrepreneurs"
+  }
+}

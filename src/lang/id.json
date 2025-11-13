@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "events": "Kegiatan",
+    "contact": "Kontak",
+    "tpc": "TPC"
+  },
+  "language": {
+    "ina": "INA",
+    "eng": "ENG"
+  },
+  "header": {
+    "tagline": "Membangun pengusaha muda"
+  }
+}
