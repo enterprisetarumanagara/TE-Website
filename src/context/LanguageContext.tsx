@@ -3,15 +3,14 @@
 import React, {
   createContext,
   useContext,
-  useState,
   useEffect,
+  useState,
+  PropsWithChildren,
 } from "react";
-
 import en from "@/lang/en.json";
 import id from "@/lang/id.json";
 
 type Language = "id" | "en";
-type Messages = typeof en;
 
 type LanguageContextValue = {
   language: Language;
@@ -24,41 +23,44 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(
   undefined
 );
 
-const DICTIONARIES: Record<Language, Messages> = {
+const DICTIONARIES = {
   en,
   id,
-};
+} as const;
 
-function getInitialLanguage(): Language {
-  if (typeof window === "undefined") return "id";
-  const saved = window.localStorage.getItem("language");
-  return saved === "en" || saved === "id" ? saved : "id";
-}
-
-export const LanguageProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>(() => getInitialLanguage());
-
+export const LanguageProvider: React.FC<PropsWithChildren> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>("id");
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("language", language);
+    if (typeof window === "undefined") return;
+
+    const saved = window.localStorage.getItem("language");
+    if (saved === "en" || saved === "id") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLanguage(saved);
     }
-  }, [language]);
+  }, []);
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "id" ? "en" : "id"));
+    setLanguage((prev) => {
+      const next: Language = prev === "id" ? "en" : "id";
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("language", next);
+      }
+      return next;
+    });
   };
 
   const t = (key: string): string => {
     const segments = key.split(".");
     let current: unknown = DICTIONARIES[language];
 
-    for (const segment of segments) {
+    for (const seg of segments) {
       if (
         typeof current === "object" &&
         current !== null &&
-        segment in (current as Record<string, unknown>)
+        seg in (current as Record<string, unknown>)
       ) {
-        current = (current as Record<string, unknown>)[segment];
+        current = (current as Record<string, unknown>)[seg];
       } else {
         return key;
       }
@@ -68,7 +70,9 @@ export const LanguageProvider: React.FC<React.PropsWithChildren> = ({ children }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage, toggleLanguage, t }}
+    >
       {children}
     </LanguageContext.Provider>
   );
