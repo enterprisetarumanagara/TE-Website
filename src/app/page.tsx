@@ -1,7 +1,9 @@
-"use client";
+import Hero from "@/components/sections/Hero";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-[100vh] bg-white"></main>
+    <main>
+      <Hero />
+    </main>
   );
 }
