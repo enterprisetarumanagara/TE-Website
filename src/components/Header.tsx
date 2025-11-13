@@ -31,9 +31,9 @@ const Header: React.FC = () => {
           <Image
             src="/logos/TE-Logo.svg"
             alt="Tarumanagara Enterprise Logo"
-            width={90}
+            width={190}
             height={200}
-            className="h-8 w-auto"
+            className="h-10 w-auto"
             priority
           />
         </Link>
