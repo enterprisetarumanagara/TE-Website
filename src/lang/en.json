@@ -6,13 +6,16 @@
     "contact": "Contact",
     "tpc": "TPC"
   },
+
   "language": {
     "ina": "INA",
     "eng": "ENG"
   },
+
   "header": {
     "tagline": "Empowering young entrepreneurs"
   },
+
   "whatWeDo": {
     "headingMain": "Tarumanagara Enterprise",
     "subheading": "What We Do?",
@@ -33,6 +36,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   },
+
   "events": {
     "headingMain": "Upcoming Events From TE",
     "subheading": "Join Our Events",
@@ -49,6 +53,31 @@
     "eventTourist2025": {
       "title": "Event Tourist 2025",
       "date": "Sunday, 23 Mar 2025"
+    }
+  },
+
+  "units": {
+    "headingMain": "Other Tarumanagara Foundation Ecosystems",
+    "subheading": "We have business units based on IPE values that have a positive impact on the wider community.",
+    "unit1": {
+      "title": "Tarumanagara University",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit2": {
+      "title": "Royal Taruma Hospital",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit3": {
+      "title": "Untar Residence",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit4": {
+      "title": "ITARU",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit5": {
+      "title": "Xinya Collage",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   }
 }

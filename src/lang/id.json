@@ -6,14 +6,17 @@
     "contact": "Kontak",
     "tpc": "TPC"
   },
+
   "language": {
     "ina": "INA",
     "eng": "ENG"
   },
+
   "header": {
     "tagline": "Membangun pengusaha muda"
   },
-    "whatWeDo": {
+
+  "whatWeDo": {
     "headingMain": "Tarumanagara Enterprise",
     "subheading": "Apa Yang Kita Lakukan?",
     "seeMore": "Lihat Selengkapnya",
@@ -33,7 +36,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   },
-    "events": {
+
+  "events": {
     "headingMain": "Kegiatan Mendatang dari TE",
     "subheading": "Berpartisipasilah Dalam Kegiatan Kami",
     "seeAll": "Lihat Semua Kegiatan",
@@ -49,6 +53,31 @@
     "eventTourist2025": {
       "title": "Event Tourist 2025",
       "date": "Minggu, 23 Mar 2025"
+    }
+  },
+
+  "units": {
+    "headingMain": "Ekosistem Yayasan Tarumanagara Lainnya",
+    "subheading": "Kami memiliki unit usaha yang berlandaskan nilai IPE dan memberikan dampak positif bagi masyarakat luas.",
+    "unit1": {
+      "title": "Universitas Tarumanagara",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit2": {
+      "title": "Rumah Sakit Royal Taruma",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit3": {
+      "title": "Untar Residence",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit4": {
+      "title": "ITARU",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "unit5": {
+      "title": "Xinya Collage",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   }
 }
