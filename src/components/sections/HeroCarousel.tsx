@@ -27,20 +27,11 @@ const HeroCarousel = () => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      {/* IMAGE WRAPPER */}
       <div
-        className="
-          relative w-full max-w-[1400px]
-          h-[220px] sm:h-[260px] md:h-[320px] lg:h-[400px] xl:h-[500px]
-          overflow-hidden rounded-[20px]
-          shadow-[0_10px_24px_rgba(0,0,0,0.16)]
-        "
-      >
-        {/* SLIDER */}
+        className="relative w-full max-w-[1400px] h-[220px] sm:h-[260px] md:h-[320px] lg:h-[400px] xl:h-[500px] overflow-hidden rounded-[20px] shadow-[0_10px_24px_rgba(0,0,0,0.16)]">
         <div
           className="flex h-full transition-transform duration-700 ease-out"
-          style={{ transform: `translateX(-${index * 100}%)` }}
-        >
+          style={{ transform: `translateX(-${index * 100}%)` }}>
           {images.map((src, i) => (
             <div key={i} className="min-w-full h-full relative">
               <Image
@@ -55,7 +46,6 @@ const HeroCarousel = () => {
         </div>
       </div>
 
-      {/* DOT INDICATORS */}
       <div className="mt-3 flex gap-2">
         {images.map((_, i) => (
           <button

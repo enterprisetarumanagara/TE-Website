@@ -32,5 +32,23 @@
       "title": "Event Tourist",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
+  },
+    "events": {
+    "headingMain": "Kegiatan Mendatang dari TE",
+    "subheading": "Berpartisipasilah Dalam Kegiatan Kami",
+    "seeAll": "Lihat Semua Kegiatan",
+
+    "ceoBootcampBatch3": {
+      "title": "CEO Bootcamp Batch 3",
+      "date": "Rabu, 8 Okt 2025"
+    },
+    "immersion2025": {
+      "title": "Immersion Program 2025",
+      "date": "Sabtu, 15 Feb 2025"
+    },
+    "eventTourist2025": {
+      "title": "Event Tourist 2025",
+      "date": "Minggu, 23 Mar 2025"
+    }
   }
 }
