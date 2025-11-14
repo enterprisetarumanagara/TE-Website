@@ -94,6 +94,16 @@
 
 
 
+  "about": {
+    "heading": "Tentang Kami",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit egestas augue, nec pellentesque arcu lacinia id. Integer mi massa, elementum a sem rutrum, dapibus imperdiet odio.",
+    "galleryImageAlt": "Foto kegiatan Tarumanagara Enterprise"
+  },
+
+
+
+
+
   "TPCwhatWeDo": {
     "headingMain": "Tarumanagara Psychology Centre",
     "subheading": "Apa Yang Kita Lakukan?",

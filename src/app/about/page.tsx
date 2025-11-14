@@ -1,17 +1,10 @@
-import Hero from "@/components/sections/Hero";
-import WhatWeDo from "@/components/sections/WhatWeDo";
-import UpcomingEvents from "@/components/sections/Upcoming";
-import BusinessUnits from "@/components/sections/BusinessUnits";
-import ChairmanMessage from "@/components/sections/ChairmanWords";
+import AboutGallery from "@/app/about/components/AboutGallery";
 
-export default function HomePage() {
+export default function AboutPage() {
   return (
     <main>
-      <Hero />
-      <WhatWeDo />
-      <UpcomingEvents />
-      <BusinessUnits />
-      <ChairmanMessage />
+      <AboutGallery />
+      {/* section lain kalau ada */}
     </main>
   );
 }
