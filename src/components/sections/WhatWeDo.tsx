@@ -20,8 +20,6 @@ const WhatWeDo = () => {
   const openImmersion = () => {
     setSelectedProgram({
       title: t("whatWeDo.immersion.title"),
-      // bikin key detail terpisah di lang file kamu:
-      // whatWeDo.immersion.detail (isinya lebih panjang)
       description: t("whatWeDo.immersion.detail"),
       image: "/whatwedo/datadummy1.jpeg",
     });
@@ -61,7 +59,6 @@ const WhatWeDo = () => {
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {/* IMMERSION */}
             <article className="flex flex-col">
               <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
                 <Image
