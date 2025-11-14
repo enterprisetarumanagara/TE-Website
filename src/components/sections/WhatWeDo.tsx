@@ -1,104 +1,169 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import EventModal from "./EventMore";
+
+type ModalContent = {
+  title: string;
+  description: string;
+  image: string;
+};
 
 const WhatWeDo = () => {
-    const { t } = useLanguage();
+  const { t } = useLanguage();
 
-    return (
-        <section className="px-5 md:px-8 lg:px-10">
-            <div className="mx-auto max-w-6xl">
-                <header className="mb-8 md:mb-10">
-                    <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-semibold">
-                        {t("whatWeDo.headingMain")}
-                    </h2>
-                    <p className="mt-1 text-lg md:text-xl lg:text-[24px] text-neutral-600">
-                        {t("whatWeDo.subheading")}
-                    </p>
-                </header>
+  const [selectedProgram, setSelectedProgram] = useState<ModalContent | null>(null);
+  const isModalOpen = selectedProgram !== null;
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+  const openImmersion = () => {
+    setSelectedProgram({
+      title: t("whatWeDo.immersion.title"),
+      // bikin key detail terpisah di lang file kamu:
+      // whatWeDo.immersion.detail (isinya lebih panjang)
+      description: t("whatWeDo.immersion.detail"),
+      image: "/whatwedo/datadummy1.jpeg",
+    });
+  };
 
-                    <article className="flex flex-col">
-                        <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
-                            <Image
-                                src="/whatwedo/datadummy1.jpeg"
-                                alt="Immersion"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+  const openCeoBootcamp = () => {
+    setSelectedProgram({
+      title: t("whatWeDo.ceoBootcamp.title"),
+      description: t("whatWeDo.ceoBootcamp.detail"),
+      image: "/whatwedo/datadummy2.jpeg",
+    });
+  };
 
-                        <h3 className="text-lg font-semibold mb-2">
-                            {t("whatWeDo.immersion.title")}
-                        </h3>
+  const openEventTourist = () => {
+    setSelectedProgram({
+      title: t("whatWeDo.eventTourist.title"),
+      description: t("whatWeDo.eventTourist.detail"),
+      image: "/whatwedo/datadummy3.jpeg",
+    });
+  };
 
-                        <p className="text-xs md:text-sm text-neutral-700 leading-relaxed mb-3 text-justify">
-                            {t("whatWeDo.immersion.description")}
-                        </p>
+  const closeModal = () => {
+    setSelectedProgram(null);
+  };
 
-                        <div className="flex justify-end">
-                            <button className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors">
-                                {t("whatWeDo.seeMore")}
-                            </button>
-                        </div>
-                    </article>
+  return (
+    <>
+      <section className="px-5 md:px-8 lg:px-10">
+        <div className="mx-auto max-w-6xl">
+          <header className="mb-8 md:mb-10">
+            <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-semibold">
+              {t("whatWeDo.headingMain")}
+            </h2>
+            <p className="mt-1 text-lg md:text-xl lg:text-[24px] text-neutral-600">
+              {t("whatWeDo.subheading")}
+            </p>
+          </header>
 
-                    <article className="flex flex-col lg:mt-15">
-                        <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
-                            <Image
-                                src="/whatwedo/datadummy2.jpeg"
-                                alt="CEO Bootcamp"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {/* IMMERSION */}
+            <article className="flex flex-col">
+              <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
+                <Image
+                  src="/whatwedo/datadummy1.jpeg"
+                  alt="Immersion"
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-                        <h3 className="text-lg font-semibold mb-2">
-                            {t("whatWeDo.ceoBootcamp.title")}
-                        </h3>
+              <h3 className="text-lg font-semibold mb-2">
+                {t("whatWeDo.immersion.title")}
+              </h3>
 
-                        <p className="text-xs md:text-sm text-neutral-700 leading-relaxed mb-3 text-justify">
-                            {t("whatWeDo.ceoBootcamp.description")}
-                        </p>
+              <p className="text-xs md:text-sm text-neutral-700 leading-relaxed mb-3 text-justify">
+                {t("whatWeDo.immersion.description")}
+              </p>
 
-                        <div className="flex justify-end">
-                            <button className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors">
-                                {t("whatWeDo.seeMore")}
-                            </button>
-                        </div>
-                    </article>
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={openImmersion}
+                  className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors"
+                >
+                  {t("whatWeDo.seeMore")}
+                </button>
+              </div>
+            </article>
 
-                    <article className="flex flex-col">
-                        <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
-                            <Image
-                                src="/whatwedo/datadummy3.jpeg"
-                                alt="Event Tourist"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+            {/* CEO BOOTCAMP */}
+            <article className="flex flex-col lg:mt-15">
+              <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
+                <Image
+                  src="/whatwedo/datadummy2.jpeg"
+                  alt="CEO Bootcamp"
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
-                        <h3 className="text-lg font-semibold mb-2">
-                            {t("whatWeDo.eventTourist.title")}
-                        </h3>
+              <h3 className="text-lg font-semibold mb-2">
+                {t("whatWeDo.ceoBootcamp.title")}
+              </h3>
 
-                        <p className="text-xs md:text-sm text-neutral-700 leading-relaxed mb-3 text-justify">
-                            {t("whatWeDo.eventTourist.description")}
-                        </p>
+              <p className="text-xs md:text-sm text-neutral-700 leading-relaxed mb-3 text-justify">
+                {t("whatWeDo.ceoBootcamp.description")}
+              </p>
 
-                        <div className="flex justify-end">
-                            <button className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors">
-                                {t("whatWeDo.seeMore")}
-                            </button>
-                        </div>
-                    </article>  
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={openCeoBootcamp}
+                  className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors"
+                >
+                  {t("whatWeDo.seeMore")}
+                </button>
+              </div>
+            </article>
 
-                </div>
-            </div>
-        </section>
-    );
+            {/* EVENT TOURIST */}
+            <article className="flex flex-col">
+              <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
+                <Image
+                  src="/whatwedo/datadummy3.jpeg"
+                  alt="Event Tourist"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <h3 className="text-lg font-semibold mb-2">
+                {t("whatWeDo.eventTourist.title")}
+              </h3>
+
+              <p className="text-xs md:text-sm text-neutral-700 leading-relaxed mb-3 text-justify">
+                {t("whatWeDo.eventTourist.description")}
+              </p>
+
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  onClick={openEventTourist}
+                  className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors"
+                >
+                  {t("whatWeDo.seeMore")}
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* MODAL */}
+      <EventModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={selectedProgram?.title ?? ""}
+        description={selectedProgram?.description ?? ""}
+        image={selectedProgram?.image}
+      />
+    </>
+  );
 };
 
 export default WhatWeDo;
