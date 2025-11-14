@@ -97,7 +97,18 @@
   "about": {
     "heading": "Tentang Kami",
     "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit egestas augue, nec pellentesque arcu lacinia id. Integer mi massa, elementum a sem rutrum, dapibus imperdiet odio.",
-    "galleryImageAlt": "Foto kegiatan Tarumanagara Enterprise"
+    "galleryImageAlt": "Foto kegiatan Tarumanagara Enterprise",
+
+    "vision": {
+    "title": "Visi Kami",
+    "heading": "Menginspirasi Masyarakat Indonesia\nUntuk Hidrasi yang Lebih Sehat"
+    },
+    "mission": {
+      "title": "Misi Kami",
+      "item1": "Berkontribusi pada realisasi ide dan inovasi pelanggan dengan menyediakan produk teknologi yang aman dan cerdas.",
+      "item2": "Dengan komputer yang mendukung AI, Anda dapat mencapai hasil yang lebih cepat.",
+      "item3": "Memberikan pengalaman otomatis dengan penyimpanan proaktif dan pengalaman cloud yang sederhana namun konsisten."
+    }
   },
 
 

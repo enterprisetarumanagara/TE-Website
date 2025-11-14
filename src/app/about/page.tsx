@@ -1,10 +1,14 @@
-import AboutGallery from "@/app/about/components/AboutGallery";
-
+import AboutGallery from "./components/AboutGallery";
+import VisionMission from "./components/VisionMission";
+import ChairmanMessage from "./components/ChairmanWords";
+import Hero from "@/components/sections/Hero";
 export default function AboutPage() {
   return (
     <main>
       <AboutGallery />
-      {/* section lain kalau ada */}
+      <VisionMission />
+      <ChairmanMessage />
+      <Hero />
     </main>
   );
 }
