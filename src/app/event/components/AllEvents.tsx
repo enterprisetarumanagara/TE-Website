@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import EventModal from "./EventModal";
 
 type GridEvent = {
   id: string;
@@ -12,7 +13,9 @@ type GridEvent = {
   dateDayKey: string;
   dateMonthKey: string;
   categoriesKeys: string[];
-  descriptionKey: string;
+  descriptionKey: string; 
+  detailKey: string;      
+  detailImage: string;    
 };
 
 const BASE_EVENTS: GridEvent[] = [
@@ -24,6 +27,8 @@ const BASE_EVENTS: GridEvent[] = [
     dateDayKey: "eventsPage.ceoBootcamp.dateDay",
     dateMonthKey: "eventsPage.ceoBootcamp.dateMonth",
     descriptionKey: "eventsPage.ceoBootcamp.description",
+    detailKey: "eventsPage.ceoBootcamp.detail",
+    detailImage: "/events/dummy1.jpeg",
     categoriesKeys: [
       "eventsPage.categories.catA",
       "eventsPage.categories.catB",
@@ -38,6 +43,8 @@ const BASE_EVENTS: GridEvent[] = [
     dateDayKey: "eventsPage.immersion.dateDay",
     dateMonthKey: "eventsPage.immersion.dateMonth",
     descriptionKey: "eventsPage.immersion.description",
+    detailKey: "eventsPage.immersion.detail",
+    detailImage: "/events/dummy2.jpeg",
     categoriesKeys: [
       "eventsPage.categories.catA",
       "eventsPage.categories.catD",
@@ -51,6 +58,8 @@ const BASE_EVENTS: GridEvent[] = [
     dateDayKey: "eventsPage.eventTour.dateDay",
     dateMonthKey: "eventsPage.eventTour.dateMonth",
     descriptionKey: "eventsPage.eventTour.description",
+    detailKey: "eventsPage.eventTour.detail",
+    detailImage: "/events/dummy3.jpeg",
     categoriesKeys: [
       "eventsPage.categories.catE",
       "eventsPage.categories.catF",
@@ -68,9 +77,13 @@ const ALL_EVENTS: GridEvent[] = Array.from({ length: 9 }, (_, i) => {
 
 const EVENTS_PER_PAGE = 6; 
 
-const AllEventsGrid = () => {
+const AllEvents = () => {
   const { t } = useLanguage();
+
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedEvent, setSelectedEvent] = useState<GridEvent | null>(null);
+
+  const isModalOpen = selectedEvent !== null;
 
   const totalPages = Math.max(
     1,
@@ -92,6 +105,14 @@ const AllEventsGrid = () => {
   const prevPage = currentPage > 1 ? currentPage - 1 : null;
   const nextPage = currentPage < totalPages ? currentPage + 1 : null;
 
+  const openModal = (event: GridEvent) => {
+    setSelectedEvent(event);
+  };
+
+  const closeModal = () => {
+    setSelectedEvent(null);
+  };
+
   return (
     <section className="px-5 md:px-8 lg:px-10 pb-12 md:pb-16">
       <div className="mx-auto max-w-6xl">
@@ -105,7 +126,8 @@ const AllEventsGrid = () => {
           {currentEvents.map((ev) => (
             <article
               key={ev.id}
-              className="flex flex-col overflow-hidden rounded-[18px] border border-neutral-200 bg-white shadow-sm">
+              className="flex flex-col overflow-hidden rounded-[18px] border border-neutral-200 bg-white shadow-sm"
+            >
               <div className="relative h-[180px] sm:h-[190px] md:h-[200px] bg-neutral-200">
                 <Image
                   src={ev.image}
@@ -149,7 +171,11 @@ const AllEventsGrid = () => {
                 </p>
 
                 <div className="mt-3">
-                  <button className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-[11px] font-medium hover:bg-neutral-100 transition-colors">
+                  <button
+                    type="button"
+                    onClick={() => openModal(ev)}
+                    className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-[11px] font-medium hover:bg-neutral-100 transition-colors"
+                  >
                     {t("eventsPage.moreInfo")}
                   </button>
                 </div>
@@ -159,29 +185,28 @@ const AllEventsGrid = () => {
         </div>
 
         <div className="mt-6 md:mt-8 flex flex-col items-center gap-3">
-            <div className="flex sm:hidden items-center gap-2">
+          <div className="flex sm:hidden items-center gap-2">
             <button
-                type="button"
-                onClick={() => goToPage(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="rounded-md border border-neutral-300 px-2 py-1 text-xs disabled:opacity-40"
+              type="button"
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="rounded-md border border-neutral-300 px-2 py-1 text-xs disabled:opacity-40"
             >
-                {t("eventsPage.pagination.prev")}
+              {t("eventsPage.pagination.prev")}
             </button>
-
             <span className="text-xs">
-                {t("eventsPage.pagination.pageCurrent")} {currentPage} {t("eventsPage.pagination.pageOf")} {totalPages}
+              {t("eventsPage.pagination.pageCurrent")} {currentPage}{" "}
+              {t("eventsPage.pagination.pageOf")} {totalPages}
             </span>
-
             <button
-                type="button"
-                onClick={() => goToPage(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="rounded-md border border-neutral-300 px-2 py-1 text-xs disabled:opacity-40"
+              type="button"
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="rounded-md border border-neutral-300 px-2 py-1 text-xs disabled:opacity-40"
             >
-                {t("eventsPage.pagination.next")}
+              {t("eventsPage.pagination.next")}
             </button>
-            </div>
+          </div>
 
           <div className="hidden sm:flex lg:hidden items-center gap-1">
             {prevPage && (
@@ -228,8 +253,17 @@ const AllEventsGrid = () => {
           </div>
         </div>
       </div>
+
+      {/* MODAL DETAIL */}
+      <EventModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={selectedEvent ? t(selectedEvent.titleKey) : ""}
+        description={selectedEvent ? t(selectedEvent.detailKey) : ""}
+        image={selectedEvent?.detailImage}
+      />
     </section>
   );
 };
 
-export default AllEventsGrid;
+export default AllEvents;
