@@ -111,6 +111,18 @@
     }
   },
 
+  "contact": {
+    "headingLine1": "Contact",
+    "headingLine2": "Tarumanagara Enterprise",
+    "campusLine1": "Campus I Tarumanagara University, Main Building 5th Floor",
+    "addressLine1": "Jl. Letjen S. Parman No. 1, RT.6/RW.16",
+    "addressLine2": "Tomang, Grogol Petamburan, West Jakarta",
+    "addressLine3": "Special Capital Region of Jakarta 11470",
+    "phone": "(+62 21) 5695-8728",
+    "hoursLabel": "Opening Hours:",
+    "hoursValue": "Monday-Friday (08.00-16.45)"
+  },
+
 
 
 
