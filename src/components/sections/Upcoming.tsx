@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 type EventItem = {
   id: string;
@@ -146,9 +147,12 @@ const UpcomingEvents = () => {
           </p>
         </div>
 
-        <button className="mt-6 inline-flex items-center rounded-full border border-neutral-300 px-5 py-2 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors">
+        <Link
+          href="/event"
+          className="mt-6 inline-flex items-center rounded-full border border-neutral-300 px-5 py-2 text-xs md:text-sm font-semibold hover:bg-neutral-100 transition-colors"
+        >
           {t("events.seeAll")}
-        </button>
+        </Link>
       </div>
     </section>
   );
