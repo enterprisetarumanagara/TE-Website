@@ -126,6 +126,52 @@
 
 
 
+  "eventsPage": {
+    "heading": "Kegiatan Tarumanagara Enterprise",
+    "allHeading": "Semua Acara Tarumanagara Enterprise",
+    "moreInfo": "More Info",
+
+    "pagination": {
+      "prev": "Sebelumnya",
+      "next": "Berikutnya",
+      "pageLabel": "Halaman {{current}} dari {{total}}"
+    },
+
+    "categories": {
+      "catA": "Kategori A",
+      "catB": "Kategori B",
+      "catC": "Kategori C",
+      "catD": "Kategori D",
+      "catE": "Kategori E",
+      "catF": "Kategori F"
+    },
+
+    "ceoBootcamp": {
+      "org": "Yayasan Tarumanagara",
+      "title": "CEO Bootcamp 2025",
+      "dateDay": "11",
+      "dateMonth": "Nov",
+      "description": "Program intensif untuk mengembangkan kemampuan kepemimpinan dan manajemen bisnis para calon CEO muda."
+    },
+    "immersion": {
+      "org": "Tarumanagara Enterprise",
+      "title": "Immersion Program 2025",
+      "dateDay": "24",
+      "dateMonth": "Sep",
+      "description": "Pengalaman langsung di industri untuk memperluas wawasan dan koneksi profesional mahasiswa."
+    },
+    "eventTour": {
+      "org": "Tarumanagara Enterprise",
+      "title": "Event Tourist 2025",
+      "dateDay": "08",
+      "dateMonth": "Aug",
+      "description": "Kegiatan eksplorasi dan kolaborasi yang menghadirkan pengalaman bisnis lintas kota."
+    }
+  },
+
+
+
+  
 
   "TPCwhatWeDo": {
     "headingMain": "Tarumanagara Psychology Centre",
