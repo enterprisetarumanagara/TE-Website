@@ -67,13 +67,7 @@ const BASE_EVENTS: GridEvent[] = [
   },
 ];
 
-const ALL_EVENTS: GridEvent[] = Array.from({ length: 9 }, (_, i) => {
-  const base = BASE_EVENTS[i % BASE_EVENTS.length];
-  return {
-    ...base,
-    id: `${base.id}-${i + 1}`,
-  };
-});
+const ALL_EVENTS: GridEvent[] = BASE_EVENTS;
 
 const EVENTS_PER_PAGE = 6; 
 
@@ -254,7 +248,6 @@ const AllEvents = () => {
         </div>
       </div>
 
-      {/* MODAL DETAIL */}
       <EventModal
         isOpen={isModalOpen}
         onClose={closeModal}
