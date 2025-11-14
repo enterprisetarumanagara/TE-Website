@@ -88,7 +88,6 @@ const WhatWeDo = () => {
               </div>
             </article>
 
-            {/* CEO BOOTCAMP */}
             <article className="flex flex-col lg:mt-15">
               <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
                 <Image
@@ -118,7 +117,6 @@ const WhatWeDo = () => {
               </div>
             </article>
 
-            {/* EVENT TOURIST */}
             <article className="flex flex-col">
               <div className="w-full h-[260px] md:h-[390px] lg:h-[660px] overflow-hidden rounded-sm bg-neutral-200 mb-4 relative">
                 <Image
@@ -151,7 +149,6 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-      {/* MODAL */}
       <EventModal
         isOpen={isModalOpen}
         onClose={closeModal}
