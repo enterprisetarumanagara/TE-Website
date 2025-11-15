@@ -130,8 +130,8 @@
 
 
   "eventsPage": {
-    "heading": "Kegiatan Tarumanagara Enterprise",
-    "allHeading": "Semua Acara Tarumanagara Enterprise",
+    "heading": "Tarumanagara Enterprise Events",
+    "allHeading": "All Events From Tarumanagara Enterprise",
     "moreInfo": "More Info",
 
     "pagination": {
@@ -141,20 +141,20 @@
     },
 
     "categories": {
-      "catA": "Kategori A",
-      "catB": "Kategori B",
-      "catC": "Kategori C",
-      "catD": "Kategori D",
-      "catE": "Kategori E",
-      "catF": "Kategori F"
+      "catA": "Categories A",
+      "catB": "Categories B",
+      "catC": "Categories C",
+      "catD": "Categories D",
+      "catE": "Categories E",
+      "catF": "Categories F"
     },
 
     "ceoBootcamp": {
-      "org": "Yayasan Tarumanagara",
+      "org": "Tarumanagara Foundation",
       "title": "CEO Bootcamp 2025",
       "dateDay": "11",
       "dateMonth": "Nov",
-      "description": "Program intensif untuk mengembangkan kemampuan kepemimpinan dan manajemen bisnis para calon CEO muda.",
+      "description": "An intensive program to develop the leadership and business management skills of young CEO candidates.",
       "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta. Tambahkan beberapa paragraf supaya modalnya bisa di-scroll dengan nyaman."
     },
     "immersion": {
@@ -162,7 +162,7 @@
       "title": "Immersion Program 2025",
       "dateDay": "24",
       "dateMonth": "Sep",
-      "description": "Pengalaman langsung di industri untuk memperluas wawasan dan koneksi profesional mahasiswa.",
+      "description": "Hands-on experience in the industry to broaden students' knowledge and professional connections.",
       "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta. Tambahkan beberapa paragraf supaya modalnya bisa di-scroll dengan nyaman."
     },
     "eventTour": {
@@ -170,7 +170,7 @@
       "title": "Event Tourist 2025",
       "dateDay": "08",
       "dateMonth": "Aug",
-      "description": "Kegiatan eksplorasi dan kolaborasi yang menghadirkan pengalaman bisnis lintas kota.",
+      "description": "Exploration and collaboration activities that provide cross-city business experiences.",
       "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta. Tambahkan beberapa paragraf supaya modalnya bisa di-scroll dengan nyaman."
     }
   },
@@ -219,6 +219,52 @@
     "event3": {
       "title": "Event Tourist 2025",
       "date": "Sunday, 23 Mar 2025"
+    }
+  },
+
+    "TPCeventsPage": {
+    "heading": "Tarumanagara Psychology Centre Events",
+    "allHeading": "All Events From TPC",
+    "moreInfo": "More Info",
+
+    "pagination": {
+      "prev": "Sebelumnya",
+      "next": "Berikutnya",
+      "pageLabel": "Halaman {{current}} dari {{total}}"
+    },
+
+    "categories": {
+      "catA": "Categories A",
+      "catB": "Categories B",
+      "catC": "Categories C",
+      "catD": "Categories D",
+      "catE": "Categories E",
+      "catF": "Categories F"
+    },
+
+    "ceoBootcamp": {
+      "org": "Tarumanagara Foundation",
+      "title": "CEO Bootcamp 2025",
+      "dateDay": "11",
+      "dateMonth": "Nov",
+      "description": "An intensive program to develop the leadership and business management skills of young CEO candidates.",
+      "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta. Tambahkan beberapa paragraf supaya modalnya bisa di-scroll dengan nyaman."
+    },
+    "immersion": {
+      "org": "Tarumanagara Enterprise",
+      "title": "Immersion Program 2025",
+      "dateDay": "24",
+      "dateMonth": "Sep",
+      "description": "Hands-on experience in the industry to broaden students' knowledge and professional connections.",
+      "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta. Tambahkan beberapa paragraf supaya modalnya bisa di-scroll dengan nyaman."
+    },
+    "eventTour": {
+      "org": "Tarumanagara Enterprise",
+      "title": "Event Tourist 2025",
+      "dateDay": "08",
+      "dateMonth": "Aug",
+      "description": "Exploration and collaboration activities that provide cross-city business experiences.",
+      "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta. Tambahkan beberapa paragraf supaya modalnya bisa di-scroll dengan nyaman."
     }
   }
 }

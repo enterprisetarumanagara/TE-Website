@@ -30,9 +30,9 @@ const BASE_EVENTS: GridEvent[] = [
     detailKey: "eventsPage.ceoBootcamp.detail",
     detailImage: "/events/dummy1.jpeg",
     categoriesKeys: [
-      "eventsPage.categories.catA",
-      "eventsPage.categories.catB",
-      "eventsPage.categories.catC",
+      "TPCeventsPage.categories.catA",
+      "TPCeventsPage.categories.catB",
+      "TPCeventsPage.categories.catC",
     ],
   },
   {
@@ -46,8 +46,8 @@ const BASE_EVENTS: GridEvent[] = [
     detailKey: "eventsPage.immersion.detail",
     detailImage: "/events/dummy2.jpeg",
     categoriesKeys: [
-      "eventsPage.categories.catA",
-      "eventsPage.categories.catD",
+      "TPCeventsPage.categories.catA",
+      "TPCeventsPage.categories.catD",
     ],
   },
   {
@@ -61,8 +61,8 @@ const BASE_EVENTS: GridEvent[] = [
     detailKey: "eventsPage.eventTour.detail",
     detailImage: "/events/dummy3.jpeg",
     categoriesKeys: [
-      "eventsPage.categories.catE",
-      "eventsPage.categories.catF",
+      "TPCeventsPage.categories.catE",
+      "TPCeventsPage.categories.catF",
     ],
   },
 ];
@@ -112,7 +112,7 @@ const AllEvents = () => {
       <div className="mx-auto max-w-6xl">
         <header className="mb-6 md:mb-8 text-center">
           <h2 className="text-[22px] md:text-[26px] lg:text-[28px] font-semibold">
-            {t("eventsPage.allHeading")}
+            {t("TPCeventsPage.allHeading")}
           </h2>
         </header>
 
@@ -170,7 +170,7 @@ const AllEvents = () => {
                     onClick={() => openModal(ev)}
                     className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-1.5 text-[11px] font-medium hover:bg-neutral-100 transition-colors"
                   >
-                    {t("eventsPage.moreInfo")}
+                    {t("TPCeventsPage.moreInfo")}
                   </button>
                 </div>
               </div>
@@ -186,11 +186,11 @@ const AllEvents = () => {
               disabled={currentPage === 1}
               className="rounded-md border border-neutral-300 px-2 py-1 text-xs disabled:opacity-40"
             >
-              {t("eventsPage.pagination.prev")}
+              {t("TPCeventsPage.pagination.prev")}
             </button>
             <span className="text-xs">
-              {t("eventsPage.pagination.pageCurrent")} {currentPage}{" "}
-              {t("eventsPage.pagination.pageOf")} {totalPages}
+              {t("TPCeventsPage.pagination.pageCurrent")} {currentPage}{" "}
+              {t("TPCeventsPage.pagination.pageOf")} {totalPages}
             </span>
             <button
               type="button"
@@ -198,7 +198,7 @@ const AllEvents = () => {
               disabled={currentPage === totalPages}
               className="rounded-md border border-neutral-300 px-2 py-1 text-xs disabled:opacity-40"
             >
-              {t("eventsPage.pagination.next")}
+              {t("TPCeventsPage.pagination.next")}
             </button>
           </div>
 

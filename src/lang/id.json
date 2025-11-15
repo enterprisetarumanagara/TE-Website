@@ -218,6 +218,52 @@
       "title": "Event Tourist 2025",
       "date": "Minggu, 23 Mar 2025"
     }
+  },
+
+    "TPCeventsPage": {
+    "heading": "Kegiatan Tarumanagara Psychology Centre",
+    "allHeading": "Semua Acara TPC",
+    "moreInfo": "Info Selengkapnya",
+
+    "pagination": {
+      "prev": "Sebelumnya",
+      "next": "Berikutnya",
+      "pageLabel": "Halaman {{current}} dari {{total}}"
+    },
+
+    "categories": {
+      "catA": "Kategori A",
+      "catB": "Kategori B",
+      "catC": "Kategori C",
+      "catD": "Kategori D",
+      "catE": "Kategori E",
+      "catF": "Kategori F"
+    },
+
+    "ceoBootcamp": {
+      "org": "Yayasan Tarumanagara",
+      "title": "CEO Bootcamp 2025",
+      "dateDay": "11",
+      "dateMonth": "Nov",
+      "description": "Program intensif untuk mengembangkan kemampuan kepemimpinan dan manajemen bisnis para calon CEO muda.",
+      "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta."
+    },
+    "immersion": {
+      "org": "Tarumanagara Enterprise",
+      "title": "Immersion Program 2025",
+      "dateDay": "24",
+      "dateMonth": "Sep",
+      "description": "Pengalaman langsung di industri untuk memperluas wawasan dan koneksi profesional mahasiswa.",
+      "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta."
+    },
+    "eventTour": {
+      "org": "Tarumanagara Enterprise",
+      "title": "Event Tourist 2025",
+      "dateDay": "08",
+      "dateMonth": "Aug",
+      "description": "Kegiatan eksplorasi dan kolaborasi yang menghadirkan pengalaman bisnis lintas kota.",
+      "detail": "Lorem ipsum CEO Bootcamp versi panjang. Di sini kamu bisa jelasin struktur program, jadwal harian, mentor, benefit, dan persyaratan peserta."
+    }
   }
 
 
